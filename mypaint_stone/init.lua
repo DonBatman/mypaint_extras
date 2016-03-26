@@ -15,7 +15,6 @@ local mypaint_stone_colors = {
 	{"violet",     "Violet",     "#2000c970",1},
 	{"white",      "White",      "#abababc0",1},
 	{"yellow",     "Yellow",     "#e3ff0070",1},
-	{"clear",      "Clear",      "#000000:0",1},
 }
 
 local paintables = {
@@ -31,7 +30,6 @@ for _, entry in ipairs(mypaint_stone_colors) do
 	local nici = entry[4]
 
 -- Cobble
-minetest.register_alias("default:cobble", "default:cobble_clear")
 minetest.register_node(":default:cobble_" .. color, {
 	description = desc .. " Cobble",
 	tiles = {"default_cobble.png".. paint},
@@ -40,7 +38,6 @@ minetest.register_node(":default:cobble_" .. color, {
 })
 
 -- Desert Cobble
-minetest.register_alias("default:desert_cobble", "default:desert_cobble_clear")
 minetest.register_node(":default:desert_cobble_" .. color, {
 	description = desc .. " Desert Cobble",
 	tiles = {"default_desert_cobble.png".. paint},
@@ -49,7 +46,6 @@ minetest.register_node(":default:desert_cobble_" .. color, {
 })
 
 -- Mossy Cobble
-minetest.register_alias("default:mossycobble", "default:mossycobble_clear")
 minetest.register_node(":default:mossycobble_" .. color, {
 	description = desc .. "Mossy Cobble",
 	tiles = {"default_mossycobble.png".. paint},
@@ -58,7 +54,6 @@ minetest.register_node(":default:mossycobble_" .. color, {
 })
 
 -- Stone
-minetest.register_alias("default:stone", "default:stone_clear")
 minetest.register_node(":default:stone_" .. color, {
 	description = desc .. " Stone",
 	tiles = {"default_stone.png".. paint},
@@ -67,7 +62,6 @@ minetest.register_node(":default:stone_" .. color, {
 })
 
 -- Desert Stone
-minetest.register_alias("default:desert_stone", "default:desert_stone_clear")
 minetest.register_node(":default:desert_stone_" .. color, {
 	description = desc .. " Desert Stone",
 	tiles = {"default_desert_stone.png".. paint},
@@ -76,7 +70,6 @@ minetest.register_node(":default:desert_stone_" .. color, {
 })
 
 -- Stone Brick
-minetest.register_alias("default:stonebrick", "default:stonebrick_clear")
 minetest.register_node(":default:stonebrick_" .. color, {
 	description = desc .. " Stone Brick",
 	tiles = {"default_stone_brick.png".. paint},
@@ -85,7 +78,6 @@ minetest.register_node(":default:stonebrick_" .. color, {
 })
 
 -- Desert Stone Brick
-minetest.register_alias("default:desert_stonebrick", "default:desert_stonebrick_clear")
 minetest.register_node(":default:desert_stonebrick_" .. color, {
 	description = desc .. " Desert Stone Brick",
 	tiles = {"default_desert_stone_brick.png".. paint},

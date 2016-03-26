@@ -15,7 +15,6 @@ local mypaint_dirt_colors = {
 	{"violet",     "Violet",     "#2000c970",1},
 	{"white",      "White",      "#abababc0",1},
 	{"yellow",     "Yellow",     "#e3ff0070",1},
-	{"clear",      "Clear",      "#000000:0",1},
 }
 
 local paintables = {
@@ -29,7 +28,6 @@ for _, entry in ipairs(mypaint_dirt_colors) do
 	local nici = entry[4]
 
 -- Dirt
-minetest.register_alias("default:dirt", "default:dirt_clear")
 minetest.register_node(":default:dirt_" .. color, {
 	description = desc .. " Dirt",
 	tiles = {"default_dirt.png".. paint},
@@ -38,7 +36,6 @@ minetest.register_node(":default:dirt_" .. color, {
 })
 
 -- Dirt with Grass
-minetest.register_alias("default:dirt_with_grass", "default:dirt_with_grass_clear")
 minetest.register_node(":default:dirt_with_grass_" .. color, {
 	description = desc .. " Dirt with Grass",
 	tiles = {"default_grass.png"..paint, "default_dirt.png"..paint,
@@ -49,7 +46,6 @@ minetest.register_node(":default:dirt_with_grass_" .. color, {
 })
 
 -- Dirt with Dry Grass
-minetest.register_alias("default:dirt_with_dry_grass", "default:dirt_with_dry_grass_clear")
 minetest.register_node(":default:dirt_with_dry_grass_" .. color, {
 	description = desc .. " Dirt with Dry Grass",
 	tiles = {"default_dry_grass.png"..paint, "default_dirt.png"..paint,
@@ -60,7 +56,6 @@ minetest.register_node(":default:dirt_with_dry_grass_" .. color, {
 })
 
 -- Dirt with Snow
-minetest.register_alias("default:dirt_with_snow", "default:dirt_with_snow_clear")
 minetest.register_node(":default:dirt_with_snow_" .. color, {
 	description = desc .. " Dirt with Snow",
 	tiles = {"default_snow.png"..paint, "default_dirt.png"..paint,

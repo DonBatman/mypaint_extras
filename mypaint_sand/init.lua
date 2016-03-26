@@ -15,7 +15,6 @@ local mypaint_sand_colors = {
 	{"violet",     "Violet",     "#2000c970",1},
 	{"white",      "White",      "#abababc0",1},
 	{"yellow",     "Yellow",     "#e3ff0070",1},
-	{"clear",      "Clear",      "#000000:0",1},
 }
 
 local paintables = {
@@ -30,7 +29,6 @@ for _, entry in ipairs(mypaint_sand_colors) do
 
 
 -- Sand
-minetest.register_alias("default:sand", "default:sand_clear")
 minetest.register_node(":default:sand_" .. color, {
 	description = desc .. " Sand",
 	tiles = {"default_sand.png".. paint},
@@ -39,7 +37,6 @@ minetest.register_node(":default:sand_" .. color, {
 })
 
 -- Desert Sand
-minetest.register_alias("default:desert_sand", "default:desert_sand_clear")
 minetest.register_node(":default:desert_sand_" .. color, {
 	description = desc .. " Desert Sand",
 	tiles = {"default_desert_sand.png".. paint},
@@ -48,7 +45,6 @@ minetest.register_node(":default:desert_sand_" .. color, {
 })
 
 -- Sandstone
-minetest.register_alias("default:sandstone", "default:sandstone_clear")
 minetest.register_node(":default:sandstone_" .. color, {
 	description = desc .. " Sandstone",
 	tiles = {"default_sandstone.png".. paint},
@@ -57,7 +53,6 @@ minetest.register_node(":default:sandstone_" .. color, {
 })
 
 -- Sandstone Brick
-minetest.register_alias("default:sandstonebrick", "default:sandstonebrick_clear")
 minetest.register_node(":default:sandstonebrick_" .. color, {
 	description = desc .. " Sandstone Brick",
 	tiles = {"default_sandstone_brick.png".. paint},
