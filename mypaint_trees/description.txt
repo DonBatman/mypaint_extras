@@ -1,0 +1,1 @@
+Allows you to paint default tree and leaves nodes.
