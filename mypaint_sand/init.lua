@@ -1,20 +1,20 @@
 
 local mypaint_sand_colors = {
-	{"black",      "Black",      "#000000b0",1},
-	{"blue",       "Blue",       "#015dbb70",1},
-	{"brown",      "Brown",      "#a78c4570",1},
-	{"cyan",       "Cyan",       "#01ffd870",1},
-	{"darkgreen", "Dark Green",  "#005b0770",1},
-	{"darkgrey",  "Dark Grey",   "#303030b0",1},
-	{"green",      "Green",      "#61ff0170",1},
-	{"grey",       "Grey",       "#5b5b5bb0",1},
-	{"magenta",    "Magenta",    "#ff05bb70",1},
-	{"orange",     "Orange",     "#ff840170",1},
-	{"pink",       "Pink",       "#ff65b570",1},
-	{"red",        "Red",        "#ff000070",1},
-	{"violet",     "Violet",     "#2000c970",1},
-	{"white",      "White",      "#abababc0",1},
-	{"yellow",     "Yellow",     "#e3ff0070",1},
+		{"red",			"Red", 			"ff0000"},
+ 		{"green",		"Green", 		"00ff00"},
+ 		{"white",		"White", 		"ffffff"},
+		{"black",		"Black",		"000000"},
+		{"blue",		"Blue",			"0000ff"},
+		{"brown",		"Brown",		"190B07"},
+		{"cyan",		"Cyan",			"00ffff"},
+		{"darkgreen",	"Dark Green",	"005000"},
+		{"darkgery",	"Dark Grey",	"1C1C1C"},
+		{"gery",		"Grey",			"848484"},
+		{"magenta",		"Magenta",		"ff00ff"},
+		{"orange",		"Orange",		"ff7700"},
+		{"pink",		"Pink",			"FE2E9A"},
+		{"violet",		"Violet",		"7f007f"},
+		{"yellow",		"Yellow",		"ffff00"},
 }
 
 local paintables = {
@@ -24,15 +24,14 @@ local paintables = {
 for _, entry in ipairs(mypaint_sand_colors) do
 	local color = entry[1]
 	local desc = entry[2]
-	local paint = "^[colorize:"..entry[3]
-	local nici = entry[4]
+	local paint = "^[colorize:#"..entry[3]..":100"
 
 
 -- Sand
 minetest.register_node(":default:sand_" .. color, {
 	description = desc .. " Sand",
 	tiles = {"default_sand.png".. paint},
-	groups = {crumbly = 3, falling_node = 1, sand = 1,cracky = 2, not_in_creative_inventory = nici},
+	groups = {crumbly = 3, falling_node = 1, sand = 1,cracky = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
@@ -40,7 +39,7 @@ minetest.register_node(":default:sand_" .. color, {
 minetest.register_node(":default:desert_sand_" .. color, {
 	description = desc .. " Desert Sand",
 	tiles = {"default_desert_sand.png".. paint},
-	groups = {crumbly = 3, falling_node = 1, sand = 1, not_in_creative_inventory = nici},
+	groups = {crumbly = 3, falling_node = 1, sand = 1, not_in_creative_inventory = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
@@ -48,7 +47,7 @@ minetest.register_node(":default:desert_sand_" .. color, {
 minetest.register_node(":default:sandstone_" .. color, {
 	description = desc .. " Sandstone",
 	tiles = {"default_sandstone.png".. paint},
-	groups = {crumbly = 2, cracky = 3, not_in_creative_inventory = nici},
+	groups = {crumbly = 2, cracky = 3, not_in_creative_inventory = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 
@@ -56,7 +55,7 @@ minetest.register_node(":default:sandstone_" .. color, {
 minetest.register_node(":default:sandstonebrick_" .. color, {
 	description = desc .. " Sandstone Brick",
 	tiles = {"default_sandstone_brick.png".. paint},
-	groups = {crumbly = 2, cracky = 3, not_in_creative_inventory = nici},
+	groups = {crumbly = 2, cracky = 3, not_in_creative_inventory = 1},
 	sounds = default.node_sound_sand_defaults(),
 })
 

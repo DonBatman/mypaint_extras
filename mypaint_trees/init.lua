@@ -1,20 +1,20 @@
 
 local mypaint_tree_colors = {
-		{"red",		"Red", 			"ff0000"},
- 		{"green",	"Green", 		"00ff00"},
- 		{"white",	"White", 		"ffffff"},
-		{"black",	"Black",		"000000"},
-		{"blue",	"Blue",			"0000ff"},
-		{"brown",	"Brown",		"190B07"},
-		{"cyan",	"Cyan",			"00ffff"},
-		{"darkgreen","Dark Green",	"005000"},
+		{"red",			"Red", 			"ff0000"},
+ 		{"green",		"Green", 		"00ff00"},
+ 		{"white",		"White", 		"ffffff"},
+		{"black",		"Black",		"000000"},
+		{"blue",		"Blue",			"0000ff"},
+		{"brown",		"Brown",		"190B07"},
+		{"cyan",		"Cyan",			"00ffff"},
+		{"darkgreen",	"Dark Green",	"005000"},
 		{"darkgery",	"Dark Grey",	"1C1C1C"},
-		{"gery",	"Grey",			"848484"},
-		{"magenta",	"Magenta",		"ff00ff"},
-		{"orange",	"Orange",		"ff7700"},
-		{"pink",	"Pink",			"FE2E9A"},
-		{"violet",	"Violet",		"7f007f"},
-		{"yellow",	"Yellow",		"ffff00"},
+		{"gery",		"Grey",			"848484"},
+		{"magenta",		"Magenta",		"ff00ff"},
+		{"orange",		"Orange",		"ff7700"},
+		{"pink",		"Pink",			"FE2E9A"},
+		{"violet",		"Violet",		"7f007f"},
+		{"yellow",		"Yellow",		"ffff00"},
 }
 
 local paintables = {
@@ -24,7 +24,7 @@ local paintables = {
 for _, entry in ipairs(mypaint_tree_colors) do
 	local color = entry[1]
 	local desc = entry[2]
-	local paint = "^[colorize:"..entry[3]
+	local paint = "^[colorize:#"..entry[3]..":100"
 
 -- Wood
 
@@ -32,7 +32,7 @@ minetest.register_node(":default:tree_" .. color, {
 	description = desc .. " Tree",
 	tiles = {"default_tree_top.png".. paint, "default_tree_top.png".. paint,
 		"default_tree.png".. paint},
-	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 0},
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
 
