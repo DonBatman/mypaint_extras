@@ -32,7 +32,7 @@ for _, entry in ipairs(mypaint_fence_colors) do
 
 default.register_fence(":default:fence_wood_" .. color, {
 	description = desc .. " Wooden Fence",
-	texture = "default_wood.png".. paint,
+	texture = "default_fence_wood.png".. paint,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
@@ -47,7 +47,7 @@ doors.register_fencegate(":doors:gate_wood_" .. color, {
 -- Acacia Fence
 default.register_fence(":default:fence_acacia_wood_" .. color, {
 	description = desc .. " Acacia Fence",
-	texture = "default_acacia_wood.png".. paint,
+	texture = "default_fence_acacia_wood.png".. paint,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
@@ -62,7 +62,7 @@ doors.register_fencegate(":doors:gate_acacia_wood_" .. color, {
 -- Jungle Fence
 default.register_fence(":default:fence_junglewood_" .. color, {
 	description = desc .. " Junglewood Fence",
-	texture = "default_junglewood.png".. paint,
+	texture = "default_fence_junglewood.png".. paint,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
@@ -77,7 +77,7 @@ doors.register_fencegate(":doors:gate_junglewood_" .. color, {
 -- Aspen Fence
 default.register_fence(":default:fence_aspen_wood_" .. color, {
 	description = desc .. " Aspen Fence",
-	texture = "default_aspen_wood.png".. paint,
+	texture = "default_fence_aspen_wood.png".. paint,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
@@ -92,7 +92,7 @@ doors.register_fencegate(":doors:gate_aspen_wood_" .. color, {
 -- Pine Fence
 default.register_fence(":default:fence_pine_wood_" .. color, {
 	description = desc .. " Pine Fence",
-	texture = "default_pine_wood.png".. paint,
+	texture = "default_fence_pine_wood.png".. paint,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
