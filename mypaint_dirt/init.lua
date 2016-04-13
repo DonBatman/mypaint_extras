@@ -9,7 +9,7 @@ local mypaint_dirt_colors = {
 		{"cyan",		"Cyan",			"00ffff"},
 		{"darkgreen",	"Dark Green",	"005000"},
 		{"darkgery",	"Dark Grey",	"1C1C1C"},
-		{"gery",		"Grey",			"848484"},
+		{"grey",		"Grey",			"848484"},
 		{"magenta",		"Magenta",		"ff00ff"},
 		{"orange",		"Orange",		"ff7700"},
 		{"pink",		"Pink",			"FE2E9A"},

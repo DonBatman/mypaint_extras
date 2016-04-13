@@ -9,7 +9,7 @@ local mypaint_fence_colors = {
 		{"cyan",		"Cyan",			"00ffff"},
 		{"darkgreen",	"Dark Green",	"005000"},
 		{"darkgery",	"Dark Grey",	"1C1C1C"},
-		{"gery",		"Grey",			"848484"},
+		{"grey",		"Grey",			"848484"},
 		{"magenta",		"Magenta",		"ff00ff"},
 		{"orange",		"Orange",		"ff7700"},
 		{"pink",		"Pink",			"FE2E9A"},
@@ -19,6 +19,7 @@ local mypaint_fence_colors = {
 
 local paintables = {
 	"default:fence_wood","default:fence_acacia_wood","default:fence_junglewood","default:fence_aspen_wood","default:fence_pine_wood",
+	"doors:gate_pine_wood_closed","doors:gate_pine_wood_open","doors:gate_pine_wood"
 }
 
 for _, entry in ipairs(mypaint_fence_colors) do
@@ -35,12 +36,26 @@ default.register_fence(":default:fence_wood_" .. color, {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
+doors.register_fencegate(":doors:gate_wood_" .. color, {
+	description = desc .. " Wooden Fence Gate",
+	texture = "default_wood.png".. paint,
+	material = "default:fence_wood_" .. color,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 0},
+	sounds = default.node_sound_wood_defaults(),
+})
 
 -- Acacia Fence
 default.register_fence(":default:fence_acacia_wood_" .. color, {
 	description = desc .. " Acacia Fence",
 	texture = "default_acacia_wood.png".. paint,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
+	sounds = default.node_sound_wood_defaults(),
+})
+doors.register_fencegate(":doors:gate_acacia_wood_" .. color, {
+	description = desc .. " Acacia Fence Gate",
+	texture = "default_acacia_wood.png".. paint,
+	material = "default:fence_acacia_wood_" .. color,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 0},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -51,12 +66,26 @@ default.register_fence(":default:fence_junglewood_" .. color, {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
+doors.register_fencegate(":doors:gate_junglewood_" .. color, {
+	description = desc .. " Junglewood Fence Gate",
+	texture = "default_junglewood.png".. paint,
+	material = "default:fence_junglewood_" .. color,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 0},
+	sounds = default.node_sound_wood_defaults(),
+})
 
 -- Aspen Fence
 default.register_fence(":default:fence_aspen_wood_" .. color, {
 	description = desc .. " Aspen Fence",
 	texture = "default_aspen_wood.png".. paint,
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
+	sounds = default.node_sound_wood_defaults(),
+})
+doors.register_fencegate(":doors:gate_aspen_wood_" .. color, {
+	description = desc .. " Aspen Fence Gate",
+	texture = "default_aspen_wood.png".. paint,
+	material = "default:fence_aspen_wood_" .. color,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 0},
 	sounds = default.node_sound_wood_defaults(),
 })
 
@@ -67,7 +96,13 @@ default.register_fence(":default:fence_pine_wood_" .. color, {
 	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 1},
 	sounds = default.node_sound_wood_defaults(),
 })
-
+doors.register_fencegate(":doors:gate_pine_wood_" .. color, {
+	description = desc .. " Pine Fence Gate",
+	texture = "default_pine_wood.png".. paint,
+	material = "default:fence_pine_wood_" .. color,
+	groups = {choppy = 2, oddly_breakable_by_hand = 2, flammable = 2, not_in_creative_inventory = 0},
+	sounds = default.node_sound_wood_defaults(),
+})
 
 
 end
