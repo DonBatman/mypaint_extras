@@ -8,7 +8,7 @@ local mypaint_sand_colors = {
 		{"brown",		"Brown",		"190B07"},
 		{"cyan",		"Cyan",			"00ffff"},
 		{"darkgreen",	"Dark Green",	"005000"},
-		{"darkgery",	"Dark Grey",	"1C1C1C"},
+		{"darkgrey",	"Dark Grey",	"1C1C1C"},
 		{"grey",		"Grey",			"848484"},
 		{"magenta",		"Magenta",		"ff00ff"},
 		{"orange",		"Orange",		"ff7700"},
