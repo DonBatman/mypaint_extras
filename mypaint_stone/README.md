@@ -4,4 +4,4 @@ Paint all the default stone nodes.
 
 Requires mypaint.
 
-Licence - DWYWPL
+Licence - MIT
