@@ -1,7 +1,7 @@
-# mypaint_dirt
+# mypaint_extras
 
-Paint all the default dirt nodes.
+Paint many of the default nodes.
 
 Requires mypaint.
 
-Licence - DWYWPL
+Licence - MIT
