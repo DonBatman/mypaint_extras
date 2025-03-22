@@ -4,4 +4,5 @@ Paint many of the default nodes.
 
 Requires mypaint.
 
-Licence - MIT
+Code Licence - MIT
+Media Licence - CC0
